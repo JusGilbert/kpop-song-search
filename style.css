@@ -1,0 +1,207 @@
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Page ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #00c5fb, #c084fc);
+  background-attachment: fixed;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  letter-spacing: 4px;
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* ===== Search ===== */
+input,
+button {
+  font-family: inherit;
+}
+
+input {
+  padding: 0.6rem 1rem;
+  width: min(100%, 320px);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ec4899;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #db2777;
+}
+
+/* ===== Reset button ===== */
+#reset-button {
+  background-color: #fbbf24;
+  color: #2d2745;
+  margin-left: 0.25rem;
+}
+
+#reset-button:hover {
+  background-color: #f59e0b;
+}
+
+/* ===== Carousel ===== */
+#featured {
+  margin-top: 2rem;
+}
+
+#featured h2 {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+#carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+}
+
+.carousel-card {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+  background-color: #2d2745;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.carousel-card:hover {
+  background-color: #3a3359;
+  transform: translateY(-5px);
+}
+
+.carousel-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-card span {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ===== Artist box and messages ===== */
+.artist-card {
+  background-color: #2d2745;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.artist-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.artist-card a {
+  display: inline-block;
+  margin: 0 0.25rem;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  background-color: #fbbf24;
+  color: #2d2745;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.artist-card a:hover {
+  background-color: #f59e0b;
+}
+
+.message {
+  grid-column: 1 / -1;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Results grid ===== */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* ===== Song cards ===== */
+.song-card {
+  min-width: 0;
+  background-color: #2d2745;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+}
+
+.song-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.song-card h2 {
+  font-size: 1rem;
+}
+
+.song-card p {
+  font-size: 0.9rem;
+  color: #c9c3e0;
+}
+
+.song-card h2,
+.song-card p {
+  overflow-wrap: anywhere;
+}
+
+.song-card audio {
+  width: 100%;
+}
